@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #sketch {
+        border: 5px solid black;
+        height: 200px;
+        width: 200px;
+        position: relative;
+    }
+
+    #tmp_canvas {
+        position: absolute;
+        left: 0px; right: 0;
+        bottom: 0; top: 0;
+        cursor: crosshair;
+    }
+</style>
+
+<h1><b>Python CNN</b>: Convolutional Neural Nets</h1>
+
+<br>
+
+<div class="sechighlight">
+<div class="container sec">
+    <header class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About me</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+  <h2>About me</h2>
+
+</div>
+</div>
+
+<div class="maintext">
+    <p>
+       <img style="float: left; margin: 15px;padding: 10px;" class="img-responsive" src="{% static 'img/abdulhakim.jpg' %}">I am Abdulhakim Bashir from Katsina State of Nigeria, I have been doing learning AI for quite a while now and my intrest is deep learning specifically with computer vision. My favorite programming languages are Python and JavaScript. And OH! I also love Maths.<br>
+       Follow me on Twitter @abdulhakim82 and let's talk AI.
+    </p>
+    <p>You can also fork me on GitHub <a href="https://github.com/babdulhakim2/python_cnn">here</a></p>
+
+</div>
+
+{% endblock %}

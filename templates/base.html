@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="shortcut icon" href="/static/img/python.ico">
+  <title>Python CNN</title>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap-theme.min.css' %}">
+
+  <!--math notation-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+  <script>
+  function page_loaded() {
+  }
+  var $SCRIPT_ROOT = "{{ request.get_host }}";
+  </script><style type="text/css"></style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+      <div class="span12">
+        {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>   
+  </body>
+
+      <a href="https://github.com/babdulhakim2/python_cnn"><img  style="width:100px; position: absolute; top: 0; right: 0; border: 0;" src="{% static 'img/github.png' %}" alt="Fork me on GitHub"></a>
+
+</html>
